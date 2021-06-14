@@ -1,6 +1,6 @@
 package br.edu.insper.desagil.alfandega;
 
-public class Item {
+public class Item extends ItemGeral {
 	private String nome;
 	private double valor;
 	private double rate;
@@ -15,11 +15,18 @@ public class Item {
 		return this.nome;
 	}
 
+	@Override
 	public double getValor() {
 		return this.valor;
 	}
 
+	@Override
 	public double getRate() {
 		return this.rate;
+	}
+	
+	@Override
+	public double getTarifa() {
+		return 0.01;
 	}
 }
